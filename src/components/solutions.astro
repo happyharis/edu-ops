@@ -1,0 +1,59 @@
+---
+// @ts-ignore
+import { Icon } from "astro-icon/components";
+const solutions = [
+  {
+    title: "Student Management",
+    description: "Streamline enrollment, track progress, and manage student information efficiently.",
+    icon: "bx:bx-user-check",
+  },
+  {
+    title: "Class Scheduling",
+    description: "Easily create and manage class schedules, assignments, and teacher allocations.",
+    icon: "bx:bx-calendar",
+  },
+  {
+    title: "Financial Management",
+    description: "Simplify billing, automate invoicing, and gain clear insights into your finances.",
+    icon: "bx:bx-dollar-circle",
+  },
+  {
+    title: "Communication Tools",
+    description: "Enhance parent-teacher interaction with integrated messaging and notification systems.",
+    icon: "bx:bx-message-rounded-dots",
+  },
+  {
+    title: "Performance Analytics",
+    description: "Track student progress, teacher effectiveness, and overall center performance with detailed reports.",
+    icon: "bx:bx-line-chart",
+  },
+  {
+    title: "Customised Solutions",
+    description: "Tailor our platform to your unique needs with custom features and integrations.",
+    icon: "bx:bx-customize",
+  },
+];
+---
+
+<div class="mt-16 md:mt-0">
+  <h2 class="text-4xl lg:text-5xl font-bold lg:tracking-tight">
+    We have the solution!
+ </h2>
+
+</div>
+
+<div class="grid sm:grid-cols-2 md:grid-cols-3 my-16 gap-16">
+  {
+    solutions.map((item) => (
+      <div class="flex gap-4 items-start">
+        <div class="mt-1 bg-black rounded-full  p-2 w-8 h-8 shrink-0">
+          <Icon class="text-white" name={item.icon} />
+        </div>
+        <div>
+          <h3 class="font-semibold text-lg">{item.title}</h3>{" "}
+          <p class="text-slate-500 mt-2 leading-relaxed">{item.description}</p>
+        </div>
+      </div>
+    ))
+  }
+</div>
